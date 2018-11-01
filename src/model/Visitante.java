@@ -42,6 +42,5 @@ public class Visitante extends Usuario{
     public ArrayList<Video> getVideosFavoritos() {
         return videosFavoritos;
     }
-  
-    
+   
 }

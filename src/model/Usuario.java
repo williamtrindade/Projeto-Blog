@@ -51,6 +51,12 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-     
+
+    public ArrayList<Video> getVideosCompartilhados() {
+        return videosCompartilhados;
+    }
+
+    public ArrayList<Artigo> getArtigosCompartilhados() {
+        return artigosCompartilhados;
+    }
 }

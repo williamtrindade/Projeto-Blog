@@ -1,6 +1,5 @@
 package model;
 
-
 public class Artigo extends Publicacao {
     
     //atributos
