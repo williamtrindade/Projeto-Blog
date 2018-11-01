@@ -6,13 +6,13 @@ public class Publicacao {
     
     //atributos
     private String titulo;
-    private Date data;
+    private final int data;
     private Administrador autor;
    
     //construtores
-    public Publicacao(String titulo, Date data, Administrador autor) {
+    public Publicacao(String titulo, Administrador autor) {
+        this.data = new Date().getDate();
         this.titulo = titulo;
-        this.data = data;
         this.autor = autor;
     }
     
@@ -25,12 +25,8 @@ public class Publicacao {
         this.titulo = titulo;
     }
 
-    public Date getData() {
+    public int getData() {
         return data;
-    }
-
-    public void setData(Date data) {
-        this.data = data;
     }
 
     public Administrador getAutor() {
@@ -39,5 +35,6 @@ public class Publicacao {
 
     public void setAutor(Administrador autor) {
         this.autor = autor;
-    }    
+    }
+
 }

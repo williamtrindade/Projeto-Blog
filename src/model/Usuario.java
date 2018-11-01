@@ -20,18 +20,10 @@ public class Usuario {
     
     //metodos
     public void compartilhar(Video video) {
-        System.out.println("Video: " + video.getTitulo() + " Compartilhado no seu Perfil! ");
-    }
-    
-    public void compartilhar(Artigo artigo) {
-        System.out.println("Aritgo: " + artigo.getTitulo() + " Compartilhado no seu Perfil! ");
-    }
-    
-    public void addCompartilhados(Video video) {
         this.videosCompartilhados.add(video);
     }
     
-    public void addCompartilhados(Artigo artigo) {
+    public void compartilhar(Artigo artigo) {
         this.artigosCompartilhados.add(artigo);
     }
     
@@ -59,14 +51,6 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public ArrayList<Artigo> getArtigosCompartilhados() {
-        return artigosCompartilhados;
-    }
-
-    public ArrayList<Video> getVideosCompartilhados() {
-        return videosCompartilhados;
-    }
-
     
+     
 }

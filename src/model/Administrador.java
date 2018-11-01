@@ -15,11 +15,27 @@ public class Administrador extends Usuario {
   
     //métodos
     public void publicar (Video video) {
-        this.videosPublicados.add(video);
+        try {
+            if (video.getAutor() == super.clone()) {
+                this.videosPublicados.add(video);
+            }else{
+                System.out.println("Esse Vídeo não é seu!!");
+            }
+        } catch (CloneNotSupportedException ex) {
+            System.out.println("Não foi possivel Publicar!");
+        }
     }
     
     public void publicar (Artigo artigo) {
-        this.artigosPublicados.add(artigo);
+        try {
+            if (artigo.getAutor() == super.clone()) {
+                this.artigosPublicados.add(artigo);
+            }else{
+                System.out.println("Esse artigo não é seu!!");
+            }
+        } catch (CloneNotSupportedException ex) {
+            System.out.println("Não foi possivel Publicar!");
+        }
     }
 
     @Override
@@ -28,7 +44,7 @@ public class Administrador extends Usuario {
             if (video.getAutor() == super.clone()) {
                 System.out.println("Não pode compartilhar seus próprios Vídeos");
             }else{
-                super.addCompartilhados(video);
+                super.compartilhar(video);
                 System.out.println("Video: " + video.getTitulo() + " Compartilhado no seu Perfil! ");
             }
         } catch (CloneNotSupportedException ex) {
@@ -42,7 +58,7 @@ public class Administrador extends Usuario {
             if (artigo.getAutor() == super.clone()) {
                 System.out.println("Não pode compartilhar seus próprios Artigos");
             }else{
-                super.addCompartilhados(artigo);
+                super.compartilhar(artigo);
                 System.out.println("Artigo: " + artigo.getTitulo() + " Compartilhado no seu Perfil! ");
             }
         } catch (CloneNotSupportedException ex) {
@@ -58,6 +74,5 @@ public class Administrador extends Usuario {
     public ArrayList<Artigo> getArtigosPublicados() {
         return artigosPublicados;
     }
- 
-        
+    
 }

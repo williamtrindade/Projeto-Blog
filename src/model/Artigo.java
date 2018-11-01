@@ -1,14 +1,22 @@
 package model;
 
-import java.util.Date;
 
 public class Artigo extends Publicacao {
     
     //atributos
     private String texto;
 
-    public Artigo(String titulo, Date data, Administrador autor) {
-        super(titulo, data, autor);
+    public Artigo(String titulo, Administrador autor) {
+        super(titulo, autor);
+    }
+    
+    //gets - sets
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
     }
     
 }
