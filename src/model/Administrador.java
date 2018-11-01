@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Administrador extends Usuario {
+    
     //atributos
     private final ArrayList<Publicacao> publicacoes = new ArrayList();
     
@@ -13,10 +14,6 @@ public class Administrador extends Usuario {
     
     //métodos
     public void publicar (Video video) {
-        
-    }
-    
-    public void publicar (Artigo artigo) {
         
     }
     
