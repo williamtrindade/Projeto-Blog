@@ -25,13 +25,11 @@ public class Visitante extends Usuario{
     @Override
     public void compartilhar(Video video) {
         super.compartilhar(video);
-        System.out.println("Video: " + video.getTitulo() + " Compartilhado no seu Perfil! ");
     }
     
     @Override
     public void compartilhar(Artigo artigo) {
         super.compartilhar(artigo);
-        System.out.println("Artigo: " + artigo.getTitulo() + " Compartilhado no seu Perfil! ");
     }
     
     //gets - sets

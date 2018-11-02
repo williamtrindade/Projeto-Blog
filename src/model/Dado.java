@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class Dados {
+public class Dado {
     
     private final ArrayList<Visitante> visitantes = new ArrayList();
     private final ArrayList<Administrador> administradores = new ArrayList();

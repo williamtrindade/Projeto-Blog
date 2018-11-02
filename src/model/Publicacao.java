@@ -6,12 +6,12 @@ public class Publicacao {
     
     //atributos
     private String titulo;
-    private final int data;
+    private final Date data;
     private Administrador autor;
    
     //construtores
     public Publicacao(String titulo, Administrador autor) {
-        this.data = new Date().getDate();
+        this.data = new Date();
         this.titulo = titulo;
         this.autor = autor;
     }
@@ -25,7 +25,7 @@ public class Publicacao {
         this.titulo = titulo;
     }
 
-    public int getData() {
+    public Date getData() {
         return data;
     }
 
