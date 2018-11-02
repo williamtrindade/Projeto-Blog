@@ -1,2 +1,2 @@
 # Projeto-Blog
-Projeto da disciplina de POO - Blog
+Projeto da disciplina de POO - iBlog
